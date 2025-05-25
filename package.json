@@ -1,0 +1,24 @@
+{
+  "name": "ppi-aula3-2025",
+  "version": "1.0.0",
+  "description": "aula 3 de PPI",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelBorgesBrito/PPI-Aula3-2025.git"
+  },
+  "author": "Rafael Borges Brito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelBorgesBrito/PPI-Aula3-2025/issues"
+  },
+  "homepage": "https://github.com/RafaelBorgesBrito/PPI-Aula3-2025#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
