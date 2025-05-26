@@ -4,41 +4,7 @@ import express from "express";
 const porta = 3001;
 const host = "localhost";
 const app = express();
-var listaFornecedores = [
-    {
-        cnpj: "12.345.678/0001-01",
-        fornecedor: "Empresa A Ltda",
-        nome: "Fornecedor Alpha",
-        endereco: "Rua Principal, 123",
-        cidade: "São Paulo",
-        uf: "SP",
-        cep: "01001-000",
-        email: "contato@empresaA.com.br",
-        telefone: "(11) 9999-8888"
-    },
-    {
-        cnpj: "98.765.432/0001-02",
-        fornecedor: "Comércio B S.A.",
-        nome: "Mega Distribuidora",
-        endereco: "Av. Central, 456",
-        cidade: "Rio de Janeiro",
-        uf: "RJ",
-        cep: "20000-000",
-        email: "vendas@comercioB.com.br",
-        telefone: "(21) 7777-6666"
-    },
-    {
-        cnpj: "45.678.912/0001-03",
-        fornecedor: "Indústria C ME",
-        nome: "Fábrica Moderna",
-        endereco: "Rodovia Industrial, 789",
-        cidade: "Belo Horizonte",
-        uf: "MG",
-        cep: "30000-000",
-        email: "industriac@fabrica.com.br",
-        telefone: "(31) 5555-4444"
-    }
-];
+var listaFornecedores = [];
 var listaUsuarios = [];
 
 
