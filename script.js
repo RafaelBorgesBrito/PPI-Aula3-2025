@@ -278,7 +278,7 @@ app.get("/continuar", (req, res)=>{
      </body>
     </html>
     `);
- 
+    res.end();
  });
 
 app.get("/home", (req, res) => {
@@ -1520,12 +1520,12 @@ app.get("/listaUsuarios", (requisicao, resposta) => {
     conteudo += `
                         </tbody>
                     </table>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="/cadastroUsuario" class="btn btn-primary">Cadastrar Novo Usuario</a>
+                        <a href="/home" class="btn btn-secondary">Voltar ao Início</a>
+                    </div>
                 </div>
-                <div class="btn-group">
-                    <a class="btn btn-secondary" href="/cadastroUsuario">Continuar cadastrando...</a>
-                    <a href="/home" class="btn btn-secondary">Voltar ao Início</a>
-                </div>
-            </div>
             
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
         </body>
@@ -1567,6 +1567,7 @@ app.get("/logout", (requisicao, resposta) => {
     </html>
     
     `);
+    resposta.end();
 });
 
 const servidor = http.createServer(app);
