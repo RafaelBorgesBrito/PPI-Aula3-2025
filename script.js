@@ -473,23 +473,23 @@ app.get("/cadastroempresa",(req,res)=>{
                 <h1>FORMULÁRIO DE CADASTRO DE FORNECEDOR</h1>
                 <div class="col-md-12 position-relative">
                     <label for="cnpj" class="form-label">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpj" name="cnpj" required>
+                    <input type="text" class="form-control" placeholder="XX.XXX.XXX/0001-XX" id="cnpj" name="cnpj" required>
                 </div>
                 <div class="col-md-12 position-relative">
                     <label for="razao_social" class="form-label">Razão Social/Nome do Fornecedor</label>
-                    <input type="text" class="form-control" id="razao_social" name="razao_social" placeholder="Ex: Moraes & irmãos Ltda" required>
+                    <input type="text" class="form-control" id="razao_social" name="razao_social" placeholder="Moraes & irmãos Ltda" required>
                 </div>
                 <div class="col-md-12 position-relative">
                     <label for="nome_fantasia" class="form-label">Nome Fantasia</label>
-                    <input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia" placeholder="Ex: Loja do 1,99">
+                    <input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia" placeholder="Loja do 1,99">
                 </div>
                 <div class="col-md-8 position-relative">
                     <label for="endereco" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" name="endereco" required>
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua Maria Aparecida..." required>
                 </div>
                 <div class="col-md-4 position-relative">
                     <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" required>
+                    <input type="text" class="form-control" id="cidade" placeholder="Presidente Prudente" name="cidade" required>
                 </div>
                 <div class="col-md-6 position-relative">
                     <label for="uf" class="form-label">UF</label>
@@ -526,16 +526,16 @@ app.get("/cadastroempresa",(req,res)=>{
                 </div>
                 <div class="col-md-6 position-relative">
                     <label for="cep" class="form-label">CEP</label>
-                    <input type="text" class="form-control" id="cep" name="cep" required>
+                    <input type="text" class="form-control" id="cep" placeholder="XXXXX-XX" name="cep" required>
                 </div>
                 <div class="col-md-6 position-relative">
                     <label for="email" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" placeholder="email@gmail.com" name="email" required>
                 </div>
                 
                 <div class="col-md-6 position-relative">
                     <label for="telefone" class="form-label">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                    <input type="tel" class="form-control" id="telefone" placeholder="XXXX-XXXX" name="telefone" required>
                 </div>
                 
                 <div class="col-12 mt-4">
@@ -659,14 +659,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo + `
             <div class="col-md-12 position-relative">
                 <label for="cnpj" class="form-label">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" required>
+                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/0001-XX" required>
                 <span class="text-danger">Por favor informe o CNPJ</span>
             </div>`;
         } else {
             conteudo = conteudo + `
             <div class="col-md-12 position-relative">
                 <label for="cnpj" class="form-label">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" value="${cnpj}" required>
+                <input type="text" class="form-control" id="cnpj" placeholder="XX.XXX.XXX/0001-XX" name="cnpj" value="${cnpj}" required>
             </div>`;
         }
 
@@ -675,14 +675,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo + `
             <div class="col-md-12 position-relative">
                 <label for="razao_social" class="form-label">Razão Social/Nome do Fornecedor</label>
-                <input type="text" class="form-control" id="razao_social" name="razao_social" required>
+                <input type="text" class="form-control" id="razao_social" placeholder="Moraes & irmãos Ltda" name="razao_social" required>
                 <span class="text-danger">Por favor informe a razão social</span>
             </div>`;
         } else {
             conteudo = conteudo + `
             <div class="col-md-12 position-relative">
                 <label for="razao_social" class="form-label">Razão Social/Nome do Fornecedor</label>
-                <input type="text" class="form-control" id="razao_social" name="razao_social" value="${fornecedor}" required>
+                <input type="text" class="form-control" id="razao_social" placeholder="Moraes & irmãos Ltda" name="razao_social" value="${fornecedor}" required>
             </div>`;
         }
 
@@ -691,14 +691,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo + `
             <div class="col-md-12 position-relative">
                 <label for="nome_fantasia" class="form-label">Nome Fantasia</label>
-                <input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia" required>
+                <input type="text" class="form-control" id="nome_fantasia" placeholder="Loja do 1,99" name="nome_fantasia" required>
                 <span class="text-danger">Por favor informe o nome fantasia</span>
             </div>`;
         } else {
             conteudo = conteudo +`
             <div class="col-md-12 position-relative">
                 <label for="nome_fantasia" class="form-label">Nome Fantasia</label>
-                <input type="text" class="form-control" id="nome_fantasia" name="nome_fantasia" value="${nome}" required>
+                <input type="text" class="form-control" id="nome_fantasia" placeholder="Loja do 1,99" name="nome_fantasia" value="${nome}" required>
             </div>`;
         }
 
@@ -707,14 +707,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo +`
             <div class="col-md-8 position-relative">
                 <label for="endereco" class="form-label">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" required>
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua Maria Aparecida..." required>
                 <span class="text-danger">Por favor informe o endereço</span>
             </div>`;
         } else {
             conteudo = conteudo +`
             <div class="col-md-8 position-relative">
                 <label for="endereco" class="form-label">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" value="${endereco}" required>
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua Maria Aparecida..." value="${endereco}" required>
             </div>`;
         }
 
@@ -723,14 +723,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo +`
             <div class="col-md-4 position-relative">
                 <label for="cidade" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name="cidade" required>
+                <input type="text" class="form-control" id="cidade" placeholder="Presidente Prudente" name="cidade" required>
                 <span class="text-danger">Por favor informe a cidade</span>
             </div>`;
         } else {
             conteudo = conteudo + `
             <div class="col-md-4 position-relative">
                 <label for="cidade" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name="cidade" value="${cidade}" required>
+                <input type="text" class="form-control" id="cidade" placeholder="Presidente Prudente" name="cidade" value="${cidade}" required>
             </div>`;
         }
 
@@ -813,14 +813,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo +`
             <div class="col-md-6 position-relative">
                 <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" name="cep" required>
+                <input type="text" class="form-control" id="cep" placeholder="XXXXX-XX" name="cep" required>
                 <span class="text-danger">Por favor informe o CEP</span>
             </div>`;
         } else {
             conteudo = conteudo +`
             <div class="col-md-6 position-relative">
                 <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" name="cep" value="${cep}" required>
+                <input type="text" class="form-control" id="cep" placeholder="XXXXX-XX" name="cep" value="${cep}" required>
             </div>`;
         }
 
@@ -829,14 +829,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo = conteudo + `
             <div class="col-md-6 position-relative">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" placeholder="email@gmail.com" name="email" required>
                 <span class="text-danger">Por favor informe o e-mail</span>
             </div>`;
         } else {
             conteudo = conteudo +`
             <div class="col-md-6 position-relative">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" value="${email}" required>
+                <input type="email" class="form-control" id="email" placeholder="email@gmail.com" name="email" value="${email}" required>
             </div>`;
         }
 
@@ -845,14 +845,14 @@ app.post("/cadastroempresa", (req, res) => {
             conteudo += `
             <div class="col-md-6 position-relative">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                <input type="tel" class="form-control" id="telefone" placeholder="XXXX-XXXX"  name="telefone" required>
                 <span class="text-danger">Por favor informe o telefone</span>
             </div>`;
         } else {
             conteudo = conteudo +`
             <div class="col-md-6 position-relative">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" name="telefone" value="${telefone}" required>
+                <input type="tel" class="form-control" id="telefone" placeholder="XXXX-XXXX" name="telefone" value="${telefone}" required>
             </div>`;
         }
 
@@ -1079,22 +1079,22 @@ app.get("/cadastroUsuario", (requisicao, resposta) => {
                     <h1>Cadastro de Usuários</h1>
                     <div class="col-md-4 position-relative">
                         <label for="nome" class="form-label">Primeiro nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
+                        <input type="text" class="form-control" id="nome" placeholder="Rafael" name="nome" required>
                     </div>
                     <div class="col-md-4 position-relative">
                         <label for="sobronome" class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobronome" name="sobronome" required>
+                        <input type="text" class="form-control" id="sobronome" placeholder="Almeida" name="sobronome" required>
                     </div>
                     <div class="col-md-4 position-relative">
                         <label for="nomeUsuario" class="form-label">Nome do usuário:</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" aria-describedby="inputGroupPrepend" required>
+                            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" placeholder="email@gmail.com" aria-describedby="inputGroupPrepend" required>
                         </div>
                     </div>
                     <div class="col-md-6 position-relative">
                         <label for="cidade" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" name="cidade" required>
+                        <input type="text" class="form-control" id="cidade" placeholder="Presidente Prudente" name="cidade" required>
                     </div>
                     <div class="col-md-3 position-relative">
                         <label for="uf" class="form-label">UF</label>
@@ -1131,7 +1131,7 @@ app.get("/cadastroUsuario", (requisicao, resposta) => {
                     </div>
                     <div class="col-md-3 position-relative">
                         <label for="cep" class="form-label">CEP</label>
-                        <input type="text" class="form-control" id="cep" name="cep" required>
+                        <input type="text" class="form-control" placeholder="XXXX-XXXX" id="cep" name="cep" required>
                     </div>
                     <div class="col-12 mt-4">
                         <button class="btn btn-primary" type="submit">Cadastrar</button>
@@ -1246,13 +1246,13 @@ app.post("/cadastroUsuario", (requisicao, resposta) => {
         if (!nome) {
             conteudo = conteudo + `
                         <label for="nome" class="form-label">Primeiro nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
+                        <input type="text" class="form-control" id="nome" placeholder="Rafael" name="nome" required>
                         <span class="text-danger">Por favor informe o nome</span>`;
         }
         else {
             conteudo = conteudo + `
                         <label for="nome" class="form-label">Primeiro nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" value="${nome}" required>`;
+                        <input type="text" class="form-control" id="nome" placeholder="Rafael" name="nome" value="${nome}" required>`;
         }
 
         conteudo = conteudo + `
@@ -1261,13 +1261,13 @@ app.post("/cadastroUsuario", (requisicao, resposta) => {
         if (!sobronome) {
             conteudo = conteudo + `
                         <label for="sobronome" class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobronome" name="sobronome" required>
+                        <input type="text" class="form-control" id="sobronome" placeholder="Almeida" name="sobronome" required>
                         <span class="text-danger">Por favor informe o sobrenome</span>`;
         }
         else {
             conteudo = conteudo + `
                         <label for="sobronome" class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobronome" name="sobronome" value="${sobronome}" required>`;
+                        <input type="text" class="form-control" id="sobronome" placeholder="Almeida" name="sobronome" value="${sobronome}" required>`;
         }
 
         conteudo = conteudo + `
@@ -1278,13 +1278,13 @@ app.post("/cadastroUsuario", (requisicao, resposta) => {
         if (!nomeUsuario) {
             conteudo = conteudo + `
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" aria-describedby="inputGroupPrepend" required>
+                            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" placeholder="email@gmail.com" aria-describedby="inputGroupPrepend" required>
                             <span class="text-danger">Por favor informe o nome de usuário</span>`;
         }
         else {
             conteudo = conteudo + `          
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" value="${nomeUsuario}" aria-describedby="inputGroupPrepend" required>`;
+                            <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" placeholder="email@gmail.com" value="${nomeUsuario}" aria-describedby="inputGroupPrepend" required>`;
         }
         conteudo = conteudo + `
                         </div>
@@ -1293,13 +1293,13 @@ app.post("/cadastroUsuario", (requisicao, resposta) => {
         if (!cidade) {
             conteudo = conteudo + `
                         <label for="cidade" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" name="cidade" required>
+                        <input type="text" class="form-control" id="cidade" placeholder="Presidente Prudente" name="cidade" required>
                         <span class="text-danger">Por favor informe a cidade</span>`;
         }
         else {
             conteudo = conteudo + `
                         <label for="cidade" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" name="cidade" value="${cidade}" required>`;
+                        <input type="text" class="form-control" id="cidade" placeholder="Presidente Prudente" name="cidade" value="${cidade}" required>`;
         }
 
         conteudo = conteudo + `
@@ -1379,12 +1379,12 @@ app.post("/cadastroUsuario", (requisicao, resposta) => {
                         <label for="cep" class="form-label">CEP</label>`;
         if (!cep) {
             conteudo = conteudo + `
-                        <input type="text" class="form-control" id="cep" name="cep" required>
+                        <input type="text" class="form-control" id="cep" placeholder="XXXX-XXXX" name="cep" required>
                         <span class="text-danger">Por favor informe o CEP</span>`;
         }
         else {
             conteudo = conteudo + `
-                        <input type="text" class="form-control" id="cep" name="cep" value="${cep}" required>`;
+                        <input type="text" class="form-control" id="cep" placeholder="XXXX-XXXX" name="cep" value="${cep}" required>`;
         }
         conteudo = conteudo + `
                     </div>
